@@ -43,7 +43,8 @@ namespace EmployeeRecords
 
             int index = employeeDB.FindIndex(emp => emp.id == searchID); 
             // above brackets contents (lambda expression) is basically another way of writing a foreach loop
-            if (index >= 0) //  if the mathching id is found:
+
+            if (index >= 0) //  if an employee with a matching id is found:
             {
                 employeeDB.RemoveAt(index);
                 outputLabel.Text = $"Employee {searchID} deleted";
